@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
   <strong>Title:</strong>
   <%= @blog.title %>
 </p>
@@ -10,5 +9,15 @@
   <%= @blog.body %>
 </p>
 
+<%# <hr>
+<%# params.inspect%> 
+
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+
+
+
+<% if session[:source] %>
+<hr>
+ <p> Thanks for visiting me from <%= session[:source] %> </p>
+<% end %>
