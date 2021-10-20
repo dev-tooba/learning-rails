@@ -6,14 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <div> <%= link_to "Home", root_path %> </div>
-    <div> <%= link_to "Blog", blogs_path %> </div>
-    <div> <%= link_to "Portfolio", portfolios_path %> </div>
+    <%= render "shared/nav", location: "top" %>
     <%= yield %>
 
 
@@ -21,6 +19,5 @@
 <p class="alert"><%= alert %></p>
 <%= login_helper %>
 <%= source_helper %>
-
   </body>
 </html>
