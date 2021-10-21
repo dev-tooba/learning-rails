@@ -58,3 +58,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'ostruct', '~> 0.4.0'
+
+gem 'bootstrap', '~> 4.0.0'
