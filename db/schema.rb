@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_20_065049) do
+ActiveRecord::Schema.define(version: 2021_10_21_091216) do
 
   create_table "blogs", force: :cascade do |t|
     t.string "title"
@@ -50,6 +50,13 @@ ActiveRecord::Schema.define(version: 2021_10_20_065049) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["portfolio_id"], name: "index_technolofies_on_portfolio_id"
+  end
+
+  create_table "tests", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_tests_on_name", unique: true
   end
 
   create_table "topics", force: :cascade do |t|
